@@ -1,27 +1,9 @@
 import requests
+import json
 
-url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=D5E2JVERV0RPWC30'
-# apikey = D5E2JVERV0RPWC30
-r = requests.get(url, headers = {"User-agent": "Snorres mac"})
-data = r.json()
-
-print(data["Meta Data"]["2. Symbol"])
-
-# def IBM(selskap):
-#     url = f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={selskap}&interval=5min&apikey=demo'
-#     r = requests.get(url, headers = {"User-agent": "Snorres mac"})
-#     data = r.json()
-#     print(data["Meta Data"]["2. Symbol"])
-#     return r
-
-# def kurs(selskap):
-    # url = f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={selskap}&interval=5min&apikey=demo'
-    # r = requests.get(url, headers = {"User-agent": "Snorres mac"})
-    # data = r.json()
-    # print(data["Time Series (5min)"]["2023-02-08 20:00:00"])
-    # return r
-
-
+fil = open("s&p.json", encoding="utf-8")
+sp = json.load(fil)
+fil.close()
 
 def kurs(selskap):
     url = f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={selskap}&interval=5min&apikey=D5E2JVERV0RPWC30'
@@ -32,8 +14,22 @@ def kurs(selskap):
     time_list_innhold = list(timeseries.values())
     time_list_dato = list(timeseries)
     time_list_dato[0]
-    print(time_list_dato[0], time_list_innhold[0]['1. open'])
+    #print(data["Meta Data"]["2. Symbol"])
+    #print(time_list_dato[0], time_list_innhold[0]['1. open'])
 
-    return r
+    return time_list_innhold[0]
 
-kurs("IBM")
+
+def gaarsdagens_kurs(selskap):
+    url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={selskap}&apikey=D5E2JVERV0RPWC30'
+    r = requests.get(url, headers = {"User-agent": "Snorres mac"})
+    data = r.json()
+
+    timeseries = data["Time Series (Daily)"]
+    time_list_innhold = list(timeseries.values())
+    time_list_dato = list(timeseries)
+    time_list_dato[1]
+
+    # print(time_list_dato[1], time_list_innhold[1]['1. open'])
+    return time_list_innhold[1]
+

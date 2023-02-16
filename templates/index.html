@@ -3,13 +3,18 @@
 {% block main %} 
 
 <h1>Hjemsiden</h1>
+<div>
+    <h1>IBM</h1>
 
-<article >
-    {% for aksje in aksjeliste %}
+</div>
+
+<article>
         <div>
-            <h4>{{aksje["Meta Data"]["2. Symbol"]}}</h4>
+            <h4>IBM: {{kurs_selskap["1. open"]}}</h4>
         </div>
-    {% endfor %}
+        <div>
+            <h4>IBM 15. feb: {{kurs_selskap_gaar["1. open"]}}</h4>
+        </div>
 </article>
 
 {% endblock %} 
