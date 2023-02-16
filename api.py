@@ -19,7 +19,6 @@ def kurs(selskap):
 
     return time_list_innhold[0]
 
-
 def gaarsdagens_kurs(selskap):
     url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={selskap}&apikey=D5E2JVERV0RPWC30'
     r = requests.get(url, headers = {"User-agent": "Snorres mac"})

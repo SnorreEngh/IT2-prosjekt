@@ -14,6 +14,10 @@ def hjem():
 
 @app.route("/selskaper")
 def selskaper():
-    return render_template("selskaper.html")
+
+    kurs_selskap = kurs("IBM")
+    kurs_selskap_gaar = gaarsdagens_kurs("IBM")
+
+    return render_template("selskaper.html", kurs_selskap=kurs_selskap, kurs_selskap_gaar=kurs_selskap_gaar)
 
 app.run(debug=True)
