@@ -2,16 +2,24 @@
 
 {% block main %} 
 
-<h1>Hjemsiden</h1>
 <div>
-    <h1>IBM</h1>
-
+    <h1>Selskap</h1>
+    <h2>Selskap ticker</h2>
 </div>
 
 <article>
-        <div>
-            <h4>IBM 16. feb: {{kurs_selskap["1. open"]}}</h4>
-        </div>
+    <div>
+        <p>info om selskapet </p>
+    </div>
+    <div>
+        <h4>data er: {{data}}</h4>
+    </div>
+    <div>
+        <h4>IBM 16. feb: {{aapl_historical}}</h4>
+    </div>
+    <div>
+        <h4>IBM 16. feb: {{apple}}</h4>
+    </div>
 </article>
 
 {% endblock %} 
