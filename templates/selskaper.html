@@ -2,24 +2,28 @@
 
 {% block main %} 
 
-<div>
-    <h1>Selskap</h1>
-    <h2>Selskap ticker</h2>
-</div>
+
+<!-- <article>
+    <div>
+        <h1>{{apple.info['sector']}}</h1>
+        <h2>Selskap ticker</h2>
+    </div>
+</article> -->
+
 
 <article>
-    <div>
-        <p>info om selskapet </p>
-    </div>
+    <!-- <div>
+        <p>{{apple.info['longBusinessSummary']}}</p>
+        <p>sector: {{apple.info['sector']}}</p>
+        <p>nåværdende aksjepris er: {{pris}}</p>
+    </div> -->
     <div>
         <h4>data er: {{data}}</h4>
     </div>
     <div>
         <h4>IBM 16. feb: {{aapl_historical}}</h4>
     </div>
-    <div>
-        <h4>IBM 16. feb: {{apple}}</h4>
-    </div>
+
 </article>
 
 {% endblock %} 
