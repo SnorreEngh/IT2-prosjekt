@@ -1,7 +1,16 @@
 body{
     background-color: rgb(9, 62, 109);
     color: whitesmoke;
+    margin: 0;
 }
 a{
     color: whitesmoke;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#oslo-børs-bilde{
+    width: 100%;
 }
