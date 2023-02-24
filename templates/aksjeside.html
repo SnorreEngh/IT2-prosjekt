@@ -1,21 +1,42 @@
 {% extends "mal.html" %} 
 
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename ='aksjeside.css')}}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Libre+Franklin:ital,wght@1,900&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block main %} 
-
-<div>
+<div id="hovedinnhold">
+    <h1>hallo verden</h1>
     <h1>{{aapl.company}}</h1>
+    <!-- <div>
 
-    <p>{{aapl.summary}}</p>
-</div>
-<div>
+        <p>{{aapl.summary}}</p>
+    </div> -->
     <div>
-        <article>
-            <h1>Pris: {{aapl.price}} {{aapl.info}}</h1>
-        </article>
+        <div>
+            <article>
+                <h1>Pris: {{aapl.price}} {{aapl.info}}</h1>
+            </article>
+        </div>
+        <p>graf av aksjekurs</p> 
+        <p>informasjonsboks om aksjekurs</p>
+        <p>api-hentet data </p>
     </div>
-    <p>graf av aksjekurs</p> 
-    <p>informasjonsboks om aksjekurs</p>
-    <p>api-hentet data </p>
+    <!-- <div>
+        <section class="skewbox">
+            <div class="content">
+                <h1>Company info</h1>
+                <p>{{aapl.summary}}</p>
+            </div>
+            <div class="imagebox">
+
+            </div>
+        </section>
+    </div> -->
 </div>
 
 

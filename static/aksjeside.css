@@ -1,0 +1,43 @@
+#hovedinnhold{
+    padding-bottom: 500px;
+}
+
+h1{
+    /* font-family: 'Archivo Black', sans-serif; */
+    font-family: 'Libre Franklin', sans-serif; font-weight: 900; font-style: italic;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 1300px;
+    background-color: white;
+    box-shadow: 0 10px 30px grey;
+    display: flex;
+}
+
+.content{
+    width: calc(50% -50px);
+    height: 100%;
+    background-color: white;
+    padding: 2% 5%;
+    line-height: 1,5em;
+    font-size: 18px;
+    text-align: justify;
+    color: black;
+}
+
+.imagebox{
+    width: calc(50% + 50px);
+    height: 100px;
+    background-color: #419B3C;
+    border-left: 100px solid white;
+    border-bottom: 500px solid transparent;
+}
